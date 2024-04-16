@@ -28,19 +28,19 @@ socket.on('disconnect', () => {
 });
 
 const discordIds = {
-	guild: '1198025479303725086', // Discord Guild ID
-	mmChannel: '1198031369373220915', // Channel to send Middleman Open Message
-	clientRole: '1189358453353885746', // Role given to the client
+	guild: '962641898533687307', // Discord Guild ID
+	mmChannel: '1229714932136808470', // Channel to send Middleman Open Message
+	clientRole: '1229713034134683668', // Role given to the client
 }
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildPresences, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessages] });
-client.login('discordToken'); // discordToken
+client.login('MTIyOTcyNzk5ODE3Nzk3MjIyNQ.G53Mcy.DNjrVKAsuUMgSpyCtAalhOtUNSN0VcCgMo6N1Q'); // discordToken
 
 client.once(Events.ClientReady, async c => {
 	console.log(`Discord Client Ready! Logged in as ${c.user.tag}`);
 	client.mmGuild = client.guilds.cache.get(discordIds.guild);
 
-	await mongoose.connect('mongodbLink'); // mongoKey
+	await mongoose.connect('mongodb+srv://ansh25698:<8pRBkOEF2M338XFe>@automm.dpixvdi.mongodb.net/'); // mongoKey
     console.log("Connected to the database.");
 
 	require('./purchase');
