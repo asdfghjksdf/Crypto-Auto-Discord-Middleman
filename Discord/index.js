@@ -1,6 +1,3 @@
-// Made by Mika (mikayla.js) - No credits needed, selling/distribution is not permitted
-// https://github.com/pastrified
-
 const { Client, Collection, Events, GatewayIntentBits, EmbedBuilder, ButtonBuilder, ActionRowBuilder, ChannelType, ButtonStyle, TextInputBuilder, ModalBuilder, TextInputStyle, PermissionsBitField } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
